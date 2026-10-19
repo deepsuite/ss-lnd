@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopSuite is a white-label, AI-powered POS and omni-channel commerce operating system for developers, agencies, and entrepreneurs." />
+  <title>ShopSuite — Own the Commerce Infrastructure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            ink: '#0b1020',
+            navy: '#111936',
+            indigoBright: '#635bff',
+            amberGlow: '#f8b84e'
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(99,91,255,.18), 0 25px 80px rgba(16,24,64,.18)',
+            card: '0 16px 45px rgba(15,23,42,.08)'
+          },
+          backgroundImage: {
+            grid: 'linear-gradient(rgba(148,163,184,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.10) 1px, transparent 1px)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #f8fafc; }
+    .hero-mesh { background-color: #0b1020; background-image: radial-gradient(circle at 20% 20%, rgba(99,91,255,.30), transparent 30%), radial-gradient(circle at 85% 30%, rgba(248,184,78,.18), transparent 28%), linear-gradient(135deg, #0b1020 0%, #111936 58%, #211d4f 100%); background-repeat: no-repeat; }
+    .hero-mesh::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(11,16,32,.35), transparent 62%); }
+    .noise { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E"); background-color: #0b1020; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .dashboard-line { stroke-dasharray: 340; stroke-dashoffset: 340; animation: draw 1.8s ease forwards .4s; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .float { animation: float 5s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  </style>
+</head>
+<body class="font-sans text-slate-900 antialiased">
+  <!-- Navigation -->
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10" aria-label="Main navigation">
+      <a href="#top" class="flex items-center gap-2.5 text-white" aria-label="ShopSuite home">
+        <span class="grid h-9 w-9 place-items-center rounded-xl bg-indigoBright shadow-lg shadow-indigo-500/30">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>
+        </span>
+        <span class="font-display text-lg font-extrabold tracking-tight">ShopSuite<span class="text-amberGlow">.</span></span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm text-slate-300 lg:flex">
+        <a class="transition hover:text-white" href="#features">Features</a>
+        <a class="transition hover:text-white" href="#stack">Tech Stack</a>
+        <a class="transition hover:text-white" href="#pricing">White-Label Tiers</a>
+        <a class="transition hover:text-white" href="https://kiko.work" target="_blank" rel="noopener">Live Demo</a>
+      </div>
+      <a href="#pricing" class="rounded-full bg-white px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-amber-100 sm:px-5">Get Source Code <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero-mesh noise relative overflow-hidden text-white" style="background-color:#0b1020;">
+      <div class="absolute inset-0 opacity-30" style="background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 48px 48px;"></div>
+      <div class="relative mx-auto max-w-7xl px-5 pb-20 pt-36 sm:px-8 sm:pt-40 lg:px-10 lg:pb-28">
+        <div class="grid items-center gap-14 lg:grid-cols-[1.04fr_.96fr] lg:gap-16">
+          <div class="max-w-3xl">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-indigo-100 backdrop-blur">
+              <span class="h-2 w-2 rounded-full bg-amberGlow shadow-[0_0_14px_#f8b84e]"></span>
+              The white-label commerce operating system
+            </div>
+            <h1 class="font-display text-4xl font-extrabold leading-[1.07] tracking-[-.04em] sm:text-6xl lg:text-[4.45rem]">Launch your own AI-powered POS &amp; commerce SaaS platform <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-white to-amber-200">instantly.</span></h1>
+            <p class="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">Get full access to a production-ready, white-label commerce operating system. Built with Laravel, Flutter, Next.js, and Python AI modules. Ready for rebranding, deep customization, and rapid local deployment across web and mobile.</p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#pricing" class="inline-flex items-center justify-center gap-2 rounded-xl bg-indigoBright px-6 py-3.5 text-sm font-bold text-white shadow-xl shadow-indigo-900/40 transition hover:-translate-y-0.5 hover:bg-indigo-500">Explore Developer Licenses <span aria-hidden="true">→</span></a>
+              <a href="https://kiko.work" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15">Launch Live Demo <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs font-medium text-slate-300">
+              <span>✓ Full source code included</span><span>✓ Production-ready assets</span><span>✓ 48-hour setup support</span>
+            </div>
+          </div>
+
+          <!-- Dashboard showcase -->
+          <div class="relative mx-auto w-full max-w-xl lg:mx-0">
+            <div class="absolute -inset-8 rounded-full bg-indigo-500/20 blur-3xl"></div>
+            <div class="relative rounded-2xl border border-white/20 bg-slate-950/70 p-2 shadow-2xl shadow-black/40 backdrop-blur-xl">
+              <div class="flex items-center gap-1.5 border-b border-white/10 px-3 pb-2.5 pt-1"><span class="h-2.5 w-2.5 rounded-full bg-red-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-300/80"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span><span class="ml-3 h-5 flex-1 rounded-md bg-white/5"></span></div>
+              <div class="grid gap-3 p-3 sm:grid-cols-[1fr_118px]">
+                <div class="rounded-xl bg-white p-3 text-slate-800">
+                  <div class="flex items-center justify-between"><div><div class="text-[9px] font-semibold uppercase tracking-wider text-slate-400">Overview</div><div class="mt-1 text-sm font-extrabold">Good morning, Alex</div></div><div class="h-7 w-7 rounded-full bg-indigo-100"></div></div>
+                  <div class="mt-4 grid grid-cols-3 gap-2"><div class="rounded-lg bg-indigo-50 p-2"><div class="text-[8px] text-slate-500">Total sales</div><div class="mt-1 text-xs font-extrabold">$48,290</div><div class="mt-1 text-[8px] font-bold text-emerald-600">↗ 12.4%</div></div><div class="rounded-lg bg-slate-50 p-2"><div class="text-[8px] text-slate-500">Orders</div><div class="mt-1 text-xs font-extrabold">1,284</div><div class="mt-1 text-[8px] font-bold text-emerald-600">↗ 8.2%</div></div><div class="rounded-lg bg-amber-50 p-2"><div class="text-[8px] text-slate-500">AOV</div><div class="mt-1 text-xs font-extrabold">$37.60</div><div class="mt-1 text-[8px] font-bold text-emerald-600">↗ 4.6%</div></div></div>
+                  <div class="mt-4 rounded-lg border border-slate-100 p-2"><div class="flex justify-between text-[9px] font-bold"><span>Revenue performance</span><span class="text-indigoBright">This month⌄</span></div><svg class="mt-3 h-20 w-full" viewBox="0 0 340 80" fill="none" preserveAspectRatio="none" aria-label="Revenue line chart"><path d="M0 63 C20 56, 33 59, 49 45 S76 52, 92 38 S115 52, 136 30 S166 43, 182 24 S207 35, 228 17 S253 35, 274 22 S311 27, 340 7" stroke="#635bff" stroke-width="3" stroke-linecap="round" class="dashboard-line"/><path d="M0 64 C20 57, 33 60, 49 46 S76 53, 92 39 S115 53, 136 31 S166 44, 182 25 S207 36, 228 18 S253 36, 274 23 S311 28, 340 8 V80 H0Z" fill="url(#fade)" opacity=".14"/><defs><linearGradient id="fade" x1="170" y1="0" x2="170" y2="80" gradientUnits="userSpaceOnUse"><stop stop-color="#635bff"/><stop offset="1" stop-color="#635bff" stop-opacity="0"/></linearGradient></defs></svg><div class="flex justify-between text-[8px] text-slate-400"><span>01 Oct</span><span>15 Oct</span><span>30 Oct</span></div></div>
+                  <div class="mt-3"><div class="mb-2 text-[9px] font-bold">Recent transactions</div><div class="space-y-2"><div class="flex items-center justify-between text-[9px]"><span class="flex items-center gap-2"><span class="grid h-5 w-5 place-items-center rounded bg-indigo-100 font-bold text-indigo-600">AC</span>Acme Coffee</span><span class="font-bold">+$240.00</span></div><div class="flex items-center justify-between text-[9px]"><span class="flex items-center gap-2"><span class="grid h-5 w-5 place-items-center rounded bg-amber-100 font-bold text-amber-700">NM</span>Nova Market</span><span class="font-bold">+$1,820.00</span></div></div></div>
+                </div>
+                <div class="hidden space-y-3 sm:block"><div class="rounded-xl border border-white/10 bg-white/10 p-3"><div class="flex items-center justify-between text-[9px] text-slate-300"><span>AI pulse</span><span class="rounded-full bg-emerald-400/20 px-1.5 py-0.5 text-[8px] text-emerald-300">Live</span></div><div class="mt-3 text-2xl font-extrabold">94<span class="text-xs font-medium text-slate-400"> / 100</span></div><div class="mt-2 h-1.5 rounded-full bg-white/10"><div class="h-full w-[94%] rounded-full bg-gradient-to-r from-indigo-400 to-amber-300"></div></div><div class="mt-2 text-[8px] text-slate-400">Operational health</div></div><div class="rounded-xl bg-gradient-to-br from-indigoBright to-indigo-900 p-3"><div class="text-[9px] text-indigo-100">Smart suggestion</div><div class="mt-2 text-[10px] font-bold leading-4 text-white">Reorder 12 items before Friday.</div><button class="mt-3 rounded-md bg-white/15 px-2 py-1 text-[8px] font-bold text-white">Review stock →</button></div></div>
+              </div>
+            </div>
+            <div class="float absolute -bottom-7 -left-5 hidden w-40 rounded-2xl border border-white/30 bg-white/95 p-3 text-slate-800 shadow-2xl sm:block"><div class="flex items-center justify-between"><span class="text-[9px] font-bold">Mobile POS</span><span class="rounded-full bg-emerald-100 px-1.5 py-0.5 text-[8px] text-emerald-700">Online</span></div><div class="mt-3 grid grid-cols-2 gap-1.5"><span class="h-10 rounded-lg bg-orange-100"></span><span class="h-10 rounded-lg bg-indigo-100"></span><span class="h-10 rounded-lg bg-emerald-100"></span><span class="h-10 rounded-lg bg-slate-100"></span></div><div class="mt-3 flex justify-between border-t pt-2 text-[9px]"><span class="text-slate-500">Cart total</span><b>$86.40</b></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-10 lg:py-32">
+      <div class="reveal max-w-2xl"><p class="text-sm font-bold uppercase tracking-[.2em] text-indigoBright">Built to compound</p><h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">One core. Every commerce workflow.</h2><p class="mt-5 text-lg leading-8 text-slate-600">Give your customers a complete operating layer instead of another disconnected tool. Every module is designed to work together—and to look like yours.</p></div>
+      <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <article class="reveal rounded-2xl border border-slate-200 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-indigo-200"><div class="grid h-11 w-11 place-items-center rounded-xl bg-indigo-50 text-indigoBright"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 3v18M18 3v18M3 6h18M3 18h18"/><path d="M9 9h6v6H9z"/></svg></div><h3 class="mt-6 text-lg font-extrabold">POS &amp; lightning sales</h3><p class="mt-3 text-sm leading-6 text-slate-600">Native keypad and grid interface, barcode engine, split payments, offline-first execution, and Bluetooth / thermal receipt printing.</p></article>
+        <article class="reveal rounded-2xl border border-slate-200 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-indigo-200"><div class="grid h-11 w-11 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3v4M5.6 5.6l2.8 2.8M3 12h4M5.6 18.4l2.8-2.8M18.4 18.4l-2.8-2.8M21 12h-4M18.4 5.6l-2.8 2.8M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg></div><h3 class="mt-6 text-lg font-extrabold">AI-native automations</h3><p class="mt-3 text-sm leading-6 text-slate-600">Turn voice into ledger entries, auto-tag stock from camera uploads, and let autonomous agents handle customer replies.</p></article>
+        <article class="reveal rounded-2xl border border-slate-200 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-indigo-200"><div class="grid h-11 w-11 place-items-center rounded-xl bg-emerald-50 text-emerald-600"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="m3 7 9-4 9 4-9 4-9-4Z"/><path d="m3 12 9 4 9-4M3 17l9 4 9-4"/></svg></div><h3 class="mt-6 text-lg font-extrabold">Dynamic inventory &amp; purchasing</h3><p class="mt-3 text-sm leading-6 text-slate-600">Real-time stock counts, multi-location alerts, low-stock notifications, and integrated supplier purchase orders.</p></article>
+        <article class="reveal rounded-2xl border border-slate-200 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-indigo-200"><div class="grid h-11 w-11 place-items-center rounded-xl bg-violet-50 text-violet-600"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 4h18v16H3z"/><path d="M3 8h18M7 4v4M17 4v4"/></svg></div><h3 class="mt-6 text-lg font-extrabold">Omni-channel storefronts</h3><p class="mt-3 text-sm leading-6 text-slate-600">Generate standalone e-commerce catalog subdomains with checkout baskets flowing directly back into the core POS.</p></article>
+        <article class="reveal rounded-2xl border border-slate-200 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-indigo-200"><div class="grid h-11 w-11 place-items-center rounded-xl bg-sky-50 text-sky-600"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.9-4.5A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg></div><h3 class="mt-6 text-lg font-extrabold">Multi-channel social inbox</h3><p class="mt-3 text-sm leading-6 text-slate-600">Merge Messenger, Instagram, and WhatsApp threads into one unified dashboard for your customer team.</p></article>
+        <article class="reveal rounded-2xl border border-slate-200 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-indigo-200"><div class="grid h-11 w-11 place-items-center rounded-xl bg-rose-50 text-rose-600"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-4M12 16V8M16 16v-7M20 16v-3"/></svg></div><h3 class="mt-6 text-lg font-extrabold">Full ledger accounting</h3><p class="mt-3 text-sm leading-6 text-slate-600">Automated P&amp;L summaries, expense books, balance sheets, and granular permissions for every outlet cashier.</p></article>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="stack" class="bg-white py-24 sm:py-32"><div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><div class="reveal flex flex-col justify-between gap-6 lg:flex-row lg:items-end"><div><p class="text-sm font-bold uppercase tracking-[.2em] text-indigoBright">Enterprise foundation</p><h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">A stack developers trust.</h2></div><p class="max-w-xl text-lg leading-8 text-slate-600">Composable, documented, and ready for the way modern regional SaaS businesses actually ship.</p></div><div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4"><div class="reveal rounded-2xl bg-slate-50 p-6"><div class="text-2xl font-extrabold tracking-tight text-red-500">L.</div><h3 class="mt-8 font-extrabold">Laravel Framework</h3><p class="mt-2 text-sm leading-6 text-slate-600">Clean RESTful APIs, robust migration queues, and secure database layers.</p></div><div class="reveal rounded-2xl bg-slate-50 p-6"><div class="text-2xl font-extrabold tracking-tight text-sky-500">Flutter</div><h3 class="mt-8 font-extrabold">Mobile native app</h3><p class="mt-2 text-sm leading-6 text-slate-600">Beautiful cross-platform iOS and Android cashier experiences from one codebase.</p></div><div class="reveal rounded-2xl bg-slate-50 p-6"><div class="text-2xl font-extrabold tracking-tight text-slate-900">N<span class="text-slate-400">/</span>JS</div><h3 class="mt-8 font-extrabold">Next.js + React</h3><p class="mt-2 text-sm leading-6 text-slate-600">Fast, SEO-optimized dashboards and instant catalog load speeds.</p></div><div class="reveal rounded-2xl bg-slate-50 p-6"><div class="text-2xl font-extrabold tracking-tight text-amber-500">Py</div><h3 class="mt-8 font-extrabold">Python AI layer</h3><p class="mt-2 text-sm leading-6 text-slate-600">NLP processing, audio transcription interpretation, and computer-vision tagging.</p></div></div></div></section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="relative overflow-hidden bg-slate-50 py-24 sm:py-32"><div class="absolute right-0 top-0 h-96 w-96 rounded-full bg-indigo-100/50 blur-3xl"></div><div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><div class="reveal text-center"><p class="text-sm font-bold uppercase tracking-[.2em] text-indigoBright">Non-exclusive licenses</p><h2 class="mt-4 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">Pick your launch velocity.</h2><p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">Start lean, launch for clients, or own the entire infrastructure. Every tier gives you the foundation to move faster.</p></div><div class="mt-14 grid gap-5 lg:grid-cols-3"><article class="reveal rounded-2xl border border-slate-200 bg-white p-8 shadow-card"><p class="text-sm font-bold text-slate-500">Single Launch License</p><div class="mt-5 flex items-end gap-1"><span class="font-display text-5xl font-extrabold tracking-tight">$499</span><span class="mb-2 text-sm text-slate-500">one-time</span></div><p class="mt-4 min-h-12 text-sm leading-6 text-slate-600">Everything you need to ship your first branded commerce product.</p><a href="mailto:hello@shopsuite.xyz?subject=Single%20Launch%20License" class="mt-8 block rounded-xl border border-slate-300 px-5 py-3 text-center text-sm font-bold transition hover:border-indigoBright hover:text-indigoBright">Choose Single Launch</a><ul class="mt-8 space-y-4 text-sm text-slate-600"><li>✓ Full web and mobile source code</li><li>✓ Standard deployment guidelines</li><li>✓ Lifetime architectural codebase updates</li></ul></article><article class="reveal relative rounded-2xl border-2 border-indigoBright bg-white p-8 shadow-glow"><div class="absolute -top-3 left-8 rounded-full bg-indigoBright px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Most popular</div><p class="text-sm font-bold text-slate-500">Agency Bundle License</p><div class="mt-5 flex items-end gap-1"><span class="font-display text-5xl font-extrabold tracking-tight">$999</span><span class="mb-2 text-sm text-slate-500">one-time</span></div><p class="mt-4 min-h-12 text-sm leading-6 text-slate-600">Turn one powerful codebase into a repeatable regional SaaS business.</p><a href="mailto:hello@shopsuite.xyz?subject=Agency%20Bundle%20License" class="mt-8 block rounded-xl bg-indigoBright px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-indigo-500">Choose Agency Bundle <span aria-hidden="true">→</span></a><ul class="mt-8 space-y-4 text-sm text-slate-600"><li>✓ Everything in Single Launch</li><li>✓ White-label rights for up to 20 merchants</li><li>✓ Custom CNAME deployment support</li></ul></article><article class="reveal rounded-2xl border border-slate-200 bg-navy p-8 text-white shadow-card"><p class="text-sm font-bold text-indigo-200">Ultimate Self-Hosted Partner</p><div class="mt-5 flex items-end gap-1"><span class="font-display text-5xl font-extrabold tracking-tight">$1,999</span><span class="mb-2 text-sm text-slate-400">one-time</span></div><p class="mt-4 min-h-12 text-sm leading-6 text-slate-300">Own the infrastructure and deploy with the confidence of a core engineering partner.</p><a href="mailto:hello@shopsuite.xyz?subject=Ultimate%20Self-Hosted%20Partner" class="mt-8 block rounded-xl bg-white px-5 py-3 text-center text-sm font-bold text-ink transition hover:bg-amber-100">Talk to engineering <span aria-hidden="true">↗</span></a><ul class="mt-8 space-y-4 text-sm text-slate-300"><li>✓ Full source code ownership rights</li><li>✓ Multi-tenant infrastructure script</li><li>✓ 48-hour direct engineering support</li><li>✓ Deploy to Hetzner or AWS S3</li></ul></article></div></div></section>
+
+    <!-- Final CTA -->
+    <section class="hero-mesh relative overflow-hidden py-24 text-white sm:py-32" style="background-color:#0b1020;"><div class="relative mx-auto max-w-4xl px-5 text-center sm:px-8"><div class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-white/10 text-amberGlow ring-1 ring-white/20"><svg width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></div><h2 class="mt-7 font-display text-4xl font-extrabold tracking-tight sm:text-6xl">Stop building from scratch.<br /><span class="text-indigo-200">Own the infrastructure.</span></h2><p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">Launch a commerce platform your market can call its own—and give your team a head start measured in months.</p><a href="mailto:hello@shopsuite.xyz?subject=Secure%20My%20ShopSuite%20Source%20Code" class="mt-9 inline-flex items-center gap-2 rounded-xl bg-white px-7 py-4 text-sm font-bold text-ink shadow-xl transition hover:-translate-y-0.5 hover:bg-amber-100">Secure your source code package <span aria-hidden="true">→</span></a></div></section>
+  </main>
+
+  <footer class="bg-ink text-slate-400"><div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 text-sm sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-10"><div class="flex items-center gap-2 text-white"><span class="grid h-7 w-7 place-items-center rounded-lg bg-indigoBright"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></span><span class="font-display font-extrabold">ShopSuite<span class="text-amberGlow">.</span></span></div><div class="flex flex-wrap gap-x-6 gap-y-2"><a class="transition hover:text-white" href="#stack">Documentation</a><a class="transition hover:text-white" href="#pricing">License Agreement</a><a class="transition hover:text-white" href="mailto:hello@shopsuite.xyz">hello@shopsuite.xyz</a></div><p>© 2026 ShopSuite. Built to be yours.</p></div></footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
